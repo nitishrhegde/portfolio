@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitish Hegde - Data Analytics Consultant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .about h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+        }
+
+        .services h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .expertise h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .expertise-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .expertise-category {
+            margin-bottom: 35px;
+        }
+
+        .expertise-category h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: #667eea;
+            border: 2px solid #667eea;
+            font-weight: 500;
+        }
+
+        /* Industries Section */
+        .industries {
+            padding: 60px 20px;
+        }
+
+        .industries h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .industry-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .industry-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .industry-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .industry-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .contact h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .contact-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #667eea;
+            min-width: 30px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .cta-center {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .services h2, .expertise h2, .industries h2, .contact h2, .about h2 {
+                font-size: 1.8rem;
+            }
+
+            .industry-cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Nitish Hegde</h1>
+            <p class="tagline">Data Analytics Consultant</p>
+            <p class="subtitle">Transforming Data into Actionable Insights | QlikSense & Tableau Expert | Driving Business Growth Through Data-Driven Decisions</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm a seasoned data analytics professional with over 5 years of hands-on experience in delivering powerful business intelligence solutions. I specialize in QlikSense and Tableau, helping organizations unlock the full potential of their data to make informed, strategic decisions.
+                </p>
+                <p style="margin-top: 20px;">
+                    With a proven track record in banking and healthcare sectors, I bring deep industry expertise and a practical approach to solving complex data challenges. Whether you're a small business looking to get started with analytics or a medium-sized company seeking to optimize your data strategy, I'm here to help you succeed.
+                </p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Industries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Services I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Dashboard Development</h3>
+                    <p>Create interactive, user-friendly dashboards in QlikSense and Tableau that provide real-time insights and drive decision-making.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Data Analysis</h3>
+                    <p>Deep-dive analysis to uncover hidden patterns, trends, and opportunities in your business data.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Business Intelligence Strategy</h3>
+                    <p>Develop comprehensive BI strategies tailored to your business needs and growth objectives.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Data Visualization</h3>
+                    <p>Transform complex data into clear, compelling visual stories that stakeholders can understand and act upon.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Process Optimization</h3>
+                    <p>Identify inefficiencies and optimize business processes using data-driven insights.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Training & Support</h3>
+                    <p>Empower your team with training on QlikSense, Tableau, and best practices in data analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="expertise-content">
+                <div class="expertise-category">
+                    <h3>🛠️ Tools & Technologies</h3>
+                    <div class="expertise-tags">
+                        <span class="tag">QlikSense</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+                <div class="expertise-category">
+                    <h3>📋 Specializations</h3>
+                    <div class="expertise-tags">
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag">ETL Processes</span>
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">KPI Development</span>
+                        <span class="tag">Report Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <h2>Industry Experience</h2>
+            <div class="industry-cards">
+                <div class="industry-card">
+                    <h3>🏦 Banking</h3>
+                    <p>Risk analysis, customer segmentation, fraud detection, and financial reporting</p>
+                </div>
+                <div class="industry-card">
+                    <h3>🏥 Healthcare</h3>
+                    <p>Patient analytics, operational efficiency, resource optimization, and quality metrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <p class="contact-subtitle">Ready to transform your data into business growth? Get in touch today!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">👤</span>
+                    <span><strong>Nitish Hegde</strong></span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:niteeshhegde006@gmail.com">niteeshhegde006@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <a href="tel:+919535489733">+91-9535489733</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Yelahanka, Bangalore</span>
+                </div>
+                <div class="cta-center">
+                    <a href="mailto:niteeshhegde006@gmail.com" class="cta-button">Schedule a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nitish Hegde - Data Analytics Consultant. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Empowering businesses through data-driven insights</p>
+        </div>
+    </footer>
+</body>
+</html>
